@@ -1,0 +1,13 @@
+---
+
+- hosts: all
+  become: true
+  gather_facts: no
+  pre_tasks:
+  - name: update repository cache and upgrade Hosts
+    tags: always
+    apt:
+      upgrade: yes
+      update_cache: yes
+
+
